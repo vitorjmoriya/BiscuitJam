@@ -1,8 +1,12 @@
 //
-//  Rat.swift
+//  Player.swift
 //  BiscuitJam
 //
 //  Created by Vitor Jundi Moriya on 20/07/21.
 //
 
-import Foundation
+import SpriteKit
+
+class Player : SKSpriteNode {
+    
+}

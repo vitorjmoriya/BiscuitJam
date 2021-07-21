@@ -15,11 +15,12 @@ class GameViewController: UIViewController {
         get { return self.orientations }
         set { self.orientations = newValue }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
-            if let scene = SKScene(fileNamed: "GameScene") {
+            if let scene = SKScene(fileNamed: "Stage1Scene") {
                 // Set the scale mode to scale to fit the window
                 scene.scaleMode = .aspectFill
                 

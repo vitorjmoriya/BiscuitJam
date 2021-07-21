@@ -8,7 +8,7 @@
 import SpriteKit
 
 protocol Rat : SKSpriteNode {
-    
+    func move()
 }
 
 

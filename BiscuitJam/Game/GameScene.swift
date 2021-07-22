@@ -10,33 +10,54 @@ import GameplayKit
 
 class GameScene: SKScene {
     
-    var player = SKSpriteNode()
+    lazy var player: SKSpriteNode = {
+        var player = self.childNode(withName: "Player") as! SKSpriteNode
+        return player
+    }()
+    
     var startTouch = CGPoint()
     var playerPosition = CGPoint()
     override func didMove(to view: SKView) {
         self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        self.player = self.childNode(withName: "Player") as! SKSpriteNode
+        self.physicsWorld.contactDelegate = self
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch = touches.first
+        if let location = touch?.location(in: self){
+            startTouch = location
+        }
+    }
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch = touches.first
+        if let location = touch?.location(in: self){
+            player.position = CGPoint(x: player.position.x + (location.x - startTouch.x) * 0.06, y: player.position.y + (location.y - startTouch.y) * 0.06)
+        }
+    }
+    override func update(_ currentTime: TimeInterval) {
         
     }
-    var lastTouch:CGPoint? = nil
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        //player.position = (touches.first?.location(in: self))!
-        //let touch = touches.first
-        lastTouch = touches.first?.location(in: self)
-    }
+}
 
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        lastTouch = touches.first?.location(in: self)
-    }
-
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        lastTouch = nil
-    }
-    
-    override func update(_ currentTime: TimeInterval) {
-        if let touch = lastTouch {
-            //let impulseVector = CGVector(dx: touch.x - player.position.x, dy: touch.y - player.position.y)
-            player.physicsBody?.velocity = CGVector(dx: (touch.x - player.position.x) * 2, dy: (touch.y - player.position.y) * 2)
+extension GameScene: SKPhysicsContactDelegate{
+    func didBegin(_ contact: SKPhysicsContact) {
+        var lowerBody: SKPhysicsBody
+        var upperBody: SKPhysicsBody
+        if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
+            lowerBody = contact.bodyA
+            upperBody = contact.bodyB
+        }
+        else{
+            lowerBody = contact.bodyB
+            upperBody = contact.bodyA
+        }
+        print("bateu")
+        if lowerBody.categoryBitMask == 1 {
+//            var label = SKLabelNode(text: "teste")
+//            label.position.x = 50
+//            label.position.y = 50
+//            label.color = UIColor.white
+//            addChild(label)
+            
         }
     }
 }

@@ -16,10 +16,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pk8-1K-O1f">
-                                <rect key="frame" x="386" y="260" width="60" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52H-ZX-4cw">
+                                <rect key="frame" x="756" y="40" width="29" height="28"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="gearshape.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgW-70-0BO">
+                                <rect key="frame" x="711" y="40" width="30" height="24"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="list.dash" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pk8-1K-O1f">
+                                <rect key="frame" x="397" y="231" width="50" height="38"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="A0B-9C-UE5"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                 <state key="normal" title="Play">
                                     <color key="titleColor" systemColor="systemGray6Color"/>
@@ -33,36 +49,27 @@
                                     <segue destination="8WP-UT-AFW" kind="presentation" id="omz-dC-3pz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52H-ZX-4cw">
-                                <rect key="frame" x="755" y="70" width="29" height="28"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="gearshape.fill" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgW-70-0BO">
-                                <rect key="frame" x="710" y="72" width="30" height="24"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="list.dash" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
-                                </state>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="52H-ZX-4cw" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="DUy-RK-r4s"/>
                             <constraint firstItem="52H-ZX-4cw" firstAttribute="leading" secondItem="IgW-70-0BO" secondAttribute="trailing" constant="15" id="OM5-Jo-qdn"/>
+                            <constraint firstItem="IgW-70-0BO" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="SrQ-Et-SRU"/>
+                            <constraint firstItem="pk8-1K-O1f" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="emw-BJ-Lrr"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="52H-ZX-4cw" secondAttribute="trailing" constant="15" id="kef-Vq-Yby"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="pk8-1K-O1f" secondAttribute="bottom" constant="100" id="mdB-lu-WFN"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="95"/>
+            <point key="canvasLocation" x="131.51658767772511" y="93.84615384615384"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--GameStoryboard-->
         <scene sceneID="3Gt-xe-VrB">
             <objects>
-                <viewControllerPlaceholder id="8WP-UT-AFW" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="GameStoryboard" id="8WP-UT-AFW" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4zA-yG-5C6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="610" y="94"/>

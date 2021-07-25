@@ -30,6 +30,9 @@
                                 <state key="normal" image="list.dash" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
                                 </state>
+                                <connections>
+                                    <segue destination="p7d-ZC-Y5B" kind="show" id="fPP-ry-OyO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pk8-1K-O1f">
                                 <rect key="frame" x="394" y="231" width="56" height="38"/>
@@ -67,6 +70,16 @@
             </objects>
             <point key="canvasLocation" x="131.51658767772511" y="93.84615384615384"/>
         </scene>
+        <!--AchievementsStoryboard-->
+        <scene sceneID="D4x-Pu-XVh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AchievementsStoryboard" id="p7d-ZC-Y5B" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="spr-n5-YA0"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XMq-2f-CJv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1321" y="-865"/>
+        </scene>
         <!--Stage Collection View Controller-->
         <scene sceneID="u2H-Sj-OQt">
             <objects>
@@ -88,6 +101,9 @@
                                 <state key="normal" image="list.dash" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
                                 </state>
+                                <connections>
+                                    <segue destination="p7d-ZC-Y5B" kind="show" id="oko-vM-O3B"/>
+                                </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JGl-6H-ZR7">
                                 <rect key="frame" x="64" y="98" width="716" height="227"/>
@@ -106,10 +122,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="321" height="227"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhf-04-oqi">
-                                                    <rect key="frame" x="8" y="8" width="305" height="211"/>
-                                                    <state key="normal" image="Stage1"/>
-                                                </button>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5rW-ql-UIv">
+                                                    <rect key="frame" x="0.0" y="0.0" width="321" height="227"/>
+                                                </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock.shield" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Bx2-nU-bSq">
                                                     <rect key="frame" x="122" y="77" width="76" height="73.999999999999986"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -117,19 +132,19 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="Bx2-nU-bSq" secondAttribute="trailing" constant="123" id="1r0-Wn-Seg"/>
-                                                <constraint firstAttribute="trailing" secondItem="fhf-04-oqi" secondAttribute="trailing" constant="8" id="BDa-Gz-6Ev"/>
+                                                <constraint firstAttribute="bottom" secondItem="5rW-ql-UIv" secondAttribute="bottom" id="2TF-MD-f5A"/>
                                                 <constraint firstItem="Bx2-nU-bSq" firstAttribute="leading" secondItem="QgE-qM-27d" secondAttribute="leading" constant="122" id="Bc6-Hu-Aeo"/>
-                                                <constraint firstItem="fhf-04-oqi" firstAttribute="leading" secondItem="QgE-qM-27d" secondAttribute="leading" constant="8" id="Cs8-Qz-tD7"/>
                                                 <constraint firstItem="Bx2-nU-bSq" firstAttribute="top" secondItem="QgE-qM-27d" secondAttribute="top" constant="76" id="G1j-7B-3CT"/>
+                                                <constraint firstItem="5rW-ql-UIv" firstAttribute="top" secondItem="QgE-qM-27d" secondAttribute="top" id="Iat-ha-CQz"/>
                                                 <constraint firstAttribute="bottom" secondItem="Bx2-nU-bSq" secondAttribute="bottom" constant="75.670000000000002" id="LeD-K6-nXy"/>
-                                                <constraint firstAttribute="bottom" secondItem="fhf-04-oqi" secondAttribute="bottom" constant="8" id="UlG-rS-Rn5"/>
-                                                <constraint firstItem="fhf-04-oqi" firstAttribute="top" secondItem="QgE-qM-27d" secondAttribute="top" constant="8" id="unG-YT-thV"/>
+                                                <constraint firstItem="5rW-ql-UIv" firstAttribute="leading" secondItem="QgE-qM-27d" secondAttribute="leading" id="Qoo-NM-Sbh"/>
+                                                <constraint firstAttribute="trailing" secondItem="5rW-ql-UIv" secondAttribute="trailing" id="qLB-Y8-DbA"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="321" height="227"/>
                                         <connections>
                                             <outlet property="lock" destination="Bx2-nU-bSq" id="lP8-FI-gZ1"/>
-                                            <outlet property="stageButton" destination="fhf-04-oqi" id="P7O-RA-wjD"/>
+                                            <outlet property="stageImage" destination="5rW-ql-UIv" id="VJF-5K-nB9"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -158,8 +173,10 @@
             <point key="canvasLocation" x="873.69668246445497" y="93.84615384615384"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="oko-vM-O3B"/>
+    </inferredMetricsTieBreakers>
     <resources>
-        <image name="Stage1" width="305" height="211"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="lock.shield" catalog="system" width="128" height="118"/>

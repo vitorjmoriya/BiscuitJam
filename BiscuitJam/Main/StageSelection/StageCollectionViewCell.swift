@@ -10,7 +10,7 @@ import UIKit
 class StageCollectionViewCell: UICollectionViewCell {
     
     
-    @IBOutlet weak var stageButton: UIButton!
+    @IBOutlet weak var stageImage: UIImageView!
     @IBOutlet weak var lock: UIImageView!
     
 }

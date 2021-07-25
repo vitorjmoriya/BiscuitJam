@@ -37,8 +37,8 @@ extension StageCollectionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StageCollectionViewCell", for: indexPath) as! StageCollectionViewCell
-        cell.stageButton.setImage(images[indexPath.item], for: .normal)
-        cell.lock.alpha = 0
+        cell.stageImage.image = images[indexPath.item]
+        cell.lock.isHidden = true
     
         return cell
     }

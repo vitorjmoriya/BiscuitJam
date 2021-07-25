@@ -45,7 +45,6 @@ class GameScene: SKScene {
     var playerPosition = CGPoint()
     var cupcake = SKSpriteNode(imageNamed: "Rat")
     override func didMove(to view: SKView) {
-        self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         self.physicsWorld.contactDelegate = self
         entityManager = EntityManager(scene: self)
         cupcake = self.childNode(withName: "cupcake") as! SKSpriteNode

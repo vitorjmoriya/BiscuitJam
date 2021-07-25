@@ -10,6 +10,9 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
+    
+    var selectedStage:Int?
+    
     private var orientations = UIInterfaceOrientationMask.landscapeLeft
     override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
         get { return self.orientations }

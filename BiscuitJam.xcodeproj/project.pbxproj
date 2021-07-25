@@ -26,6 +26,9 @@
 		5F8EE8AF26A75BBB00E4BA0E /* Rat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8EE8AE26A75BBB00E4BA0E /* Rat.swift */; };
 		5F8EE8B126A75BC800E4BA0E /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8EE8B026A75BC800E4BA0E /* Engine.swift */; };
 		5F8EE8B526A7797300E4BA0E /* Stage1Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5F8EE8B426A7797300E4BA0E /* Stage1Scene.sks */; };
+		5F9A601426AA29CB0086DE83 /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9A601326AA29CB0086DE83 /* EntityManager.swift */; };
+		5F9A601626AA2A340086DE83 /* SpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9A601526AA2A340086DE83 /* SpriteComponent.swift */; };
+		5F9A601826AA64EB0086DE83 /* ScoreComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9A601726AA64EB0086DE83 /* ScoreComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		5F8EE8AE26A75BBB00E4BA0E /* Rat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rat.swift; sourceTree = "<group>"; };
 		5F8EE8B026A75BC800E4BA0E /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		5F8EE8B426A7797300E4BA0E /* Stage1Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Stage1Scene.sks; sourceTree = "<group>"; };
+		5F9A601326AA29CB0086DE83 /* EntityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
+		5F9A601526AA2A340086DE83 /* SpriteComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteComponent.swift; sourceTree = "<group>"; };
+		5F9A601726AA64EB0086DE83 /* ScoreComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,7 @@
 				2707B13C26A86EC00029B958 /* GameStoryboard.storyboard */,
 				5F7B755B26A7064800392D56 /* GameViewController.swift */,
 				5F8EE8B026A75BC800E4BA0E /* Engine.swift */,
+				5F9A601326AA29CB0086DE83 /* EntityManager.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -124,6 +131,8 @@
 				2707B13326A86D250029B958 /* Rats */,
 				2707B13526A86D330029B958 /* PowerUps */,
 				2707B12C26A86C0B0029B958 /* Stages */,
+				5F9A601526AA2A340086DE83 /* SpriteComponent.swift */,
+				5F9A601726AA64EB0086DE83 /* ScoreComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -259,7 +268,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F9A601626AA2A340086DE83 /* SpriteComponent.swift in Sources */,
+				2707B13026A86CD40029B958 /* AchievementsViewController.swift in Sources */,
 				5F8EE8AD26A75B7200E4BA0E /* Player.swift in Sources */,
+				5F9A601426AA29CB0086DE83 /* EntityManager.swift in Sources */,
 				27C2BE6F26AB1B9A00272C6B /* StageViewController.swift in Sources */,
 				2707B14026A8762F0029B958 /* AudioPlayer.swift in Sources */,
 				2707B12926A86B020029B958 /* PowerUp.swift in Sources */,
@@ -269,6 +281,7 @@
 				5F8EE8B126A75BC800E4BA0E /* Engine.swift in Sources */,
 				5F7B755A26A7064800392D56 /* GameScene.swift in Sources */,
 				5F7B755C26A7064800392D56 /* GameViewController.swift in Sources */,
+				5F9A601826AA64EB0086DE83 /* ScoreComponent.swift in Sources */,
 				5F7B755426A7064800392D56 /* AppDelegate.swift in Sources */,
 				5F8EE8AF26A75BBB00E4BA0E /* Rat.swift in Sources */,
 				2707B12B26A86B6C0029B958 /* MainViewController.swift in Sources */,

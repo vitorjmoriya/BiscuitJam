@@ -18,6 +18,9 @@
 		27C2BE6B26AB184B00272C6B /* StageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C2BE6A26AB184B00272C6B /* StageCollectionViewCell.swift */; };
 		27C2BE6F26AB1B9A00272C6B /* StageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C2BE6E26AB1B9A00272C6B /* StageViewController.swift */; };
 		27C2BE7126AB5CFA00272C6B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27C2BE7026AB5CFA00272C6B /* MainStoryboard.storyboard */; };
+		5F11AE0F26AE39FE008213F9 /* BlindRat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F11AE0E26AE39FE008213F9 /* BlindRat.swift */; };
+		5F11AE1226AE3E28008213F9 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F11AE1126AE3E28008213F9 /* CGPoint.swift */; };
+		5F11AE1426AE3E38008213F9 /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F11AE1326AE3E38008213F9 /* CGRect.swift */; };
 		5F7B755426A7064800392D56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7B755326A7064800392D56 /* AppDelegate.swift */; };
 		5F7B755A26A7064800392D56 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7B755926A7064800392D56 /* GameScene.swift */; };
 		5F7B755C26A7064800392D56 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7B755B26A7064800392D56 /* GameViewController.swift */; };
@@ -43,6 +46,9 @@
 		27C2BE6A26AB184B00272C6B /* StageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageCollectionViewCell.swift; sourceTree = "<group>"; };
 		27C2BE6E26AB1B9A00272C6B /* StageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageViewController.swift; sourceTree = "<group>"; };
 		27C2BE7026AB5CFA00272C6B /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		5F11AE0E26AE39FE008213F9 /* BlindRat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlindRat.swift; sourceTree = "<group>"; };
+		5F11AE1126AE3E28008213F9 /* CGPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
+		5F11AE1326AE3E38008213F9 /* CGRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRect.swift; sourceTree = "<group>"; };
 		5F7B755026A7064800392D56 /* BiscuitJam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiscuitJam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F7B755326A7064800392D56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F7B755926A7064800392D56 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -133,6 +139,7 @@
 				2707B12C26A86C0B0029B958 /* Stages */,
 				5F9A601526AA2A340086DE83 /* SpriteComponent.swift */,
 				5F9A601726AA64EB0086DE83 /* ScoreComponent.swift */,
+				5F11AE0E26AE39FE008213F9 /* BlindRat.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -165,6 +172,15 @@
 			path = StageSelection;
 			sourceTree = "<group>";
 		};
+		5F11AE1026AE3E18008213F9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5F11AE1126AE3E28008213F9 /* CGPoint.swift */,
+				5F11AE1326AE3E38008213F9 /* CGRect.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		5F7B754726A7064700392D56 = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +200,7 @@
 		5F7B755226A7064800392D56 /* BiscuitJam */ = {
 			isa = PBXGroup;
 			children = (
+				5F11AE1026AE3E18008213F9 /* Extensions */,
 				2707B12E26A86CA40029B958 /* Achievements */,
 				2707B13626A86D9D0029B958 /* Settings */,
 				2707B12D26A86C360029B958 /* Game */,
@@ -269,19 +286,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F9A601626AA2A340086DE83 /* SpriteComponent.swift in Sources */,
-				2707B13026A86CD40029B958 /* AchievementsViewController.swift in Sources */,
 				5F8EE8AD26A75B7200E4BA0E /* Player.swift in Sources */,
 				5F9A601426AA29CB0086DE83 /* EntityManager.swift in Sources */,
 				27C2BE6F26AB1B9A00272C6B /* StageViewController.swift in Sources */,
+				5F11AE1226AE3E28008213F9 /* CGPoint.swift in Sources */,
 				2707B14026A8762F0029B958 /* AudioPlayer.swift in Sources */,
 				2707B12926A86B020029B958 /* PowerUp.swift in Sources */,
 				27C2BE6B26AB184B00272C6B /* StageCollectionViewCell.swift in Sources */,
 				2707B13A26A86DDB0029B958 /* SettingsViewController.swift in Sources */,
 				275D8DC626ACF47400DFBAD8 /* AchievementsCollectionViewController.swift in Sources */,
+				5F11AE1426AE3E38008213F9 /* CGRect.swift in Sources */,
 				5F8EE8B126A75BC800E4BA0E /* Engine.swift in Sources */,
 				5F7B755A26A7064800392D56 /* GameScene.swift in Sources */,
 				5F7B755C26A7064800392D56 /* GameViewController.swift in Sources */,
 				5F9A601826AA64EB0086DE83 /* ScoreComponent.swift in Sources */,
+				5F11AE0F26AE39FE008213F9 /* BlindRat.swift in Sources */,
 				5F7B755426A7064800392D56 /* AppDelegate.swift in Sources */,
 				5F8EE8AF26A75BBB00E4BA0E /* Rat.swift in Sources */,
 				2707B12B26A86B6C0029B958 /* MainViewController.swift in Sources */,

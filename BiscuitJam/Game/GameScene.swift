@@ -43,16 +43,22 @@ class GameScene: SKScene {
     var Time:Int = 0
     var startTouch = CGPoint()
     var playerPosition = CGPoint()
-    var cupcake = SKSpriteNode(imageNamed: "Rat")
+    //var cupcake = SKSpriteNode(imageNamed: "Rat")
     override func didMove(to view: SKView) {
         self.physicsWorld.contactDelegate = self
         entityManager = EntityManager(scene: self)
-        cupcake = self.childNode(withName: "cupcake") as! SKSpriteNode
+        //cupcake = self.childNode(withName: "cupcake") as! SKSpriteNode
         physicsWorld.gravity = CGVector(dx: 0.0, dy: 0.0)
-        cupcake.physicsBody?.applyImpulse(CGVector(dx: 6, dy: 6))
+        //cupcake.physicsBody?.applyImpulse(CGVector(dx: 6, dy: 6))
         setupTimer()
         self.physicsBody = borderBody
-        moveAround(within: self.frame)
+        //blindRatMove(within: self.frame)
+        //let rat = BlindRat(imageName: "Rat")
+        let rat = Rat(imageName: "Rat")
+        //rat.ratMove(within: self.frame)
+        rat.ratMove(within: self.frame)
+        addChild(rat.component(ofType: SpriteComponent.self)!.node)
+        //ratMove(within: self.frame)
     }
     
     //Movement
@@ -86,27 +92,6 @@ class GameScene: SKScene {
             playerNode.position = CGPoint(x: size.height/2, y: size.width/2)
         }
     }
-    
-    func moveAround(within rect:CGRect){
-
-        if scene != nil {
-
-            //Go randomly around the screen within view bounds
-            let point = rect.randomPoint()
-
-            //Formula: time = distance / speed
-            let duration = TimeInterval(point.distance(point: position) / 100)
-            let move = SKAction.move(to: point, duration: duration)
-            let block = SKAction.run {
-                [unowned self] in
-
-                self.moveAround(within: rect)
-            }
-            let loop = SKAction.sequence([move,block])
-
-            cupcake.run(loop)
-        }
-    }
 }
 
 extension GameScene: SKPhysicsContactDelegate{
@@ -126,19 +111,5 @@ extension GameScene: SKPhysicsContactDelegate{
             print("bateu")
             
         }
-    }
-}
-
-extension CGRect {
-    func randomPoint() -> CGPoint {
-        let origin = self.origin
-        return CGPoint(x:CGFloat(arc4random_uniform(UInt32(self.width))) + origin.x,
-                       y:CGFloat(arc4random_uniform(UInt32(self.height))) + origin.y)
-    }
-}
-
-extension CGPoint {
-    func distance(point: CGPoint) -> CGFloat {
-        return abs(CGFloat(hypotf(Float(point.x - x), Float(point.y - y))))
     }
 }

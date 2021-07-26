@@ -22,7 +22,7 @@ class StageCollectionViewController: UIViewController {
 
 }
 
-extension StageCollectionViewController: UICollectionViewDataSource {
+extension StageCollectionViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -44,8 +44,10 @@ extension StageCollectionViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "GameViewController") as! GameViewController
+        let gameStoryboard = UIStoryboard(name: "GameStoryboard", bundle: nil)
+        let vc = gameStoryboard.instantiateViewController(identifier: "GameViewController") as! GameViewController
         vc.selectedStage = indexPath.item
+        print(indexPath.item)
         show(vc, sender: self)
     }
 }

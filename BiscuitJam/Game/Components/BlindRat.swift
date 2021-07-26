@@ -1,25 +1,18 @@
 //
-//  Rat.swift
+//  BlindRat.swift
 //  BiscuitJam
 //
-//  Created by Vitor Jundi Moriya on 20/07/21.
+//  Created by Vitor Jundi Moriya on 25/07/21.
 //
 
-import SpriteKit
-
-//protocol Rat: SKSpriteNode {
-//    func move()
-//}
-
+import Foundation
 import SpriteKit
 import GameplayKit
-
-// 1
-class Rat: GKEntity {
+class BlindRat: Rat {
     
-    init(imageName: String) {
-        super.init()
-        
+    override init(imageName: String) {
+        super.init(imageName: imageName)
+        // 2
         let spriteComponent = SpriteComponent(texture: SKTexture(imageNamed: imageName))
         addComponent(spriteComponent)
     }
@@ -27,10 +20,10 @@ class Rat: GKEntity {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    func ratMove(within rect:CGRect){
+    override func ratMove(within rect:CGRect){
         
         //Go randomly around the screen within view bounds
-        let point = rect.randomBorderPoint(fromPosition: (self.component(ofType: SpriteComponent.self)?.node.position)!)
+        let point = rect.randomPoint()
         
         //Formula: time = distance / speed
         let duration = TimeInterval(point.distance(point: (self.component(ofType: SpriteComponent.self)?.node.position)!) / 100)
@@ -43,3 +36,4 @@ class Rat: GKEntity {
         self.component(ofType: SpriteComponent.self)?.node.run(loop)
     }
 }
+

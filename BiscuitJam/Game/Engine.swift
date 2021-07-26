@@ -10,4 +10,5 @@ struct Engine {
     var victories:Int
     var score:Int
     var highScore:Int
+    var time:Int
 }

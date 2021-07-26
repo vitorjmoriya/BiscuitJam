@@ -37,6 +37,7 @@
 		2707B13C26A86EC00029B958 /* GameStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameStoryboard.storyboard; sourceTree = "<group>"; };
 		2707B13F26A8762F0029B958 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		275D8DC526ACF47400DFBAD8 /* AchievementsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsCollectionViewController.swift; sourceTree = "<group>"; };
+		275D8DC726ADE5A200DFBAD8 /* The Curious Kitten - Aaron Kenny.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "The Curious Kitten - Aaron Kenny.mp3"; path = "/Users/macloving/Documents/GitHub/BiscuitJam/BiscuitJam/The Curious Kitten - Aaron Kenny.mp3"; sourceTree = "<absolute>"; };
 		27C2BE6A26AB184B00272C6B /* StageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageCollectionViewCell.swift; sourceTree = "<group>"; };
 		27C2BE6E26AB1B9A00272C6B /* StageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageViewController.swift; sourceTree = "<group>"; };
 		27C2BE7026AB5CFA00272C6B /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
@@ -182,6 +183,7 @@
 				2707B13E26A876100029B958 /* AudioManager */,
 				5F7B756026A7064A00392D56 /* Assets.xcassets */,
 				5F7B756226A7064A00392D56 /* Info.plist */,
+				275D8DC726ADE5A200DFBAD8 /* The Curious Kitten - Aaron Kenny.mp3 */,
 			);
 			path = BiscuitJam;
 			sourceTree = "<group>";

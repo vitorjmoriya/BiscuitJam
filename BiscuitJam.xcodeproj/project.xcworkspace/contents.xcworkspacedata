@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/macloving/Documents/GitHub/BiscuitJam/BiscuitJam/The Curious Kitten - Aaron Kenny.mp3">
+   </FileRef>
+   <FileRef
       location = "self:">
    </FileRef>
 </Workspace>

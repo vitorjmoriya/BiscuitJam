@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0SI-9D-ERu">
     <device id="retina6_0" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -21,20 +21,21 @@
                                 <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                             </imageView>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52H-ZX-4cw">
-                                <rect key="frame" x="756" y="40" width="29" height="28"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="755.66666666666663" y="40" width="29.333333333333371" height="28.666666666666671"/>
+                                <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" image="gearshape.fill" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" weight="semibold"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgW-70-0BO">
-                                <rect key="frame" x="711" y="42" width="30" height="24"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="707.66666666666663" y="42" width="33" height="25.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" image="list.dash" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" weight="black"/>
                                 </state>
                                 <connections>
-                                    <segue destination="p7d-ZC-Y5B" kind="show" id="fPP-ry-OyO"/>
+                                    <segue destination="PUc-cM-HG0" kind="show" id="8YJ-3i-nGJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pk8-1K-O1f">
@@ -72,20 +73,63 @@
                             <constraint firstAttribute="bottom" secondItem="kjG-U9-HjY" secondAttribute="bottom" id="rBS-8L-BH8"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="lrN-ih-VcH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.51658767772511" y="93.84615384615384"/>
+            <point key="canvasLocation" x="883.64928909952607" y="93.84615384615384"/>
         </scene>
-        <!--AchievementsStoryboard-->
-        <scene sceneID="D4x-Pu-XVh">
+        <!--View Controller-->
+        <scene sceneID="lte-w9-3vQ">
             <objects>
-                <viewControllerPlaceholder storyboardName="AchievementsStoryboard" id="p7d-ZC-Y5B" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="spr-n5-YA0"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XMq-2f-CJv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="PUc-cM-HG0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="biM-mN-Lpe">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLL-WO-nNe">
+                                <rect key="frame" x="755" y="40" width="30" height="28.666666666666671"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" image="gearshape.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" weight="semibold"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53o-sN-Sxf">
+                                <rect key="frame" x="707" y="42" width="33" height="25.333333333333329"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" image="list.dash" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" weight="black"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OD6-Lv-ey5">
+                                <rect key="frame" x="58.999999999999993" y="38" width="29.666666666666664" height="28"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" image="arrow.uturn.left.circle.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25"/>
+                                </state>
+                                <connections>
+                                    <segue destination="jin-So-Sqg" kind="unwind" unwindAction="goBackMenuWithUnwindSegue:" id="o1H-M4-rUm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Z8M-cy-AJR"/>
+                        <color key="backgroundColor" red="0.86987151900000004" green="0.68640596249999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eLL-WO-nNe" firstAttribute="leading" secondItem="53o-sN-Sxf" secondAttribute="trailing" constant="15" id="1ph-D8-5p1"/>
+                            <constraint firstItem="OD6-Lv-ey5" firstAttribute="top" secondItem="Z8M-cy-AJR" secondAttribute="top" constant="38" id="2ai-cG-2aZ"/>
+                            <constraint firstItem="Z8M-cy-AJR" firstAttribute="trailing" secondItem="eLL-WO-nNe" secondAttribute="trailing" constant="15" id="ZF6-Id-gdE"/>
+                            <constraint firstItem="OD6-Lv-ey5" firstAttribute="leading" secondItem="Z8M-cy-AJR" secondAttribute="leading" constant="15" id="hST-ib-BFe"/>
+                            <constraint firstItem="eLL-WO-nNe" firstAttribute="top" secondItem="Z8M-cy-AJR" secondAttribute="top" constant="40" id="lta-wo-Hij"/>
+                            <constraint firstItem="53o-sN-Sxf" firstAttribute="top" secondItem="Z8M-cy-AJR" secondAttribute="top" constant="42" id="vEU-Ht-f0b"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="If8-cr-ip5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kBG-ma-5ST" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="jin-So-Sqg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1321" y="-865"/>
+            <point key="canvasLocation" x="1705" y="-880"/>
         </scene>
         <!--Stage Collection View Controller-->
         <scene sceneID="u2H-Sj-OQt">
@@ -96,25 +140,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXg-i3-fkL">
-                                <rect key="frame" x="756" y="40" width="29" height="28"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="755" y="40" width="30" height="28.666666666666671"/>
+                                <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" image="gearshape.fill" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" weight="semibold"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUh-QS-mW6">
-                                <rect key="frame" x="711" y="42" width="30" height="24"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="707" y="42" width="33" height="25.333333333333329"/>
+                                <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" image="list.dash" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" weight="black"/>
                                 </state>
                                 <connections>
-                                    <segue destination="p7d-ZC-Y5B" kind="show" id="oko-vM-O3B"/>
+                                    <segue destination="PUc-cM-HG0" kind="show" id="BgI-UD-arI"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JGl-6H-ZR7">
-                                <rect key="frame" x="64" y="98" width="716" height="227"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="64" y="81.666666666666671" width="716" height="243.33333333333331"/>
+                                <color key="backgroundColor" red="0.86987151900000004" green="0.68640596249999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hJB-S2-pnn">
                                     <size key="itemSize" width="321" height="227"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -123,7 +167,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StageCollectionViewCell" id="hM4-uY-4Gz" customClass="StageCollectionViewCell" customModule="BiscuitJam" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="321" height="227"/>
+                                        <rect key="frame" x="0.0" y="8" width="321" height="227"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="QgE-qM-27d">
                                             <rect key="frame" x="0.0" y="0.0" width="321" height="227"/>
@@ -160,15 +204,28 @@
                                     <outlet property="delegate" destination="Ejh-h4-nNZ" id="0Cd-j6-Bv6"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5e5-zp-rxH">
+                                <rect key="frame" x="58.999999999999993" y="38" width="29.666666666666664" height="28"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" image="arrow.uturn.left.circle.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Cy6-oU-JWM" kind="unwind" unwindAction="goBackMenuWithUnwindSegue:" id="bsT-3b-Xwl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fLq-dp-Ld4"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.86987151904452031" green="0.68640596248035657" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fLq-dp-Ld4" firstAttribute="trailing" secondItem="JGl-6H-ZR7" secondAttribute="trailing" constant="20" id="HgC-FV-V2W"/>
                             <constraint firstItem="JGl-6H-ZR7" firstAttribute="leading" secondItem="fLq-dp-Ld4" secondAttribute="leading" constant="20" id="Uft-9P-w8t"/>
+                            <constraint firstItem="5e5-zp-rxH" firstAttribute="top" secondItem="fLq-dp-Ld4" secondAttribute="top" constant="38" id="anh-2u-VfS"/>
                             <constraint firstItem="fLq-dp-Ld4" firstAttribute="trailing" secondItem="NXg-i3-fkL" secondAttribute="trailing" constant="15" id="eft-tq-X8V"/>
                             <constraint firstItem="wUh-QS-mW6" firstAttribute="top" secondItem="fLq-dp-Ld4" secondAttribute="top" constant="42" id="fNm-jg-gdt"/>
-                            <constraint firstItem="JGl-6H-ZR7" firstAttribute="top" secondItem="NXg-i3-fkL" secondAttribute="bottom" constant="30" id="m4g-0O-KbP"/>
+                            <constraint firstItem="JGl-6H-ZR7" firstAttribute="top" secondItem="NXg-i3-fkL" secondAttribute="bottom" constant="13" id="m4g-0O-KbP"/>
+                            <constraint firstItem="5e5-zp-rxH" firstAttribute="leading" secondItem="fLq-dp-Ld4" secondAttribute="leading" constant="15" id="oa9-HK-H94"/>
                             <constraint firstItem="NXg-i3-fkL" firstAttribute="leading" secondItem="wUh-QS-mW6" secondAttribute="trailing" constant="15" id="rHj-p2-bLg"/>
                             <constraint firstItem="fLq-dp-Ld4" firstAttribute="bottom" secondItem="JGl-6H-ZR7" secondAttribute="bottom" constant="44" id="sTE-9u-73w"/>
                             <constraint firstItem="NXg-i3-fkL" firstAttribute="top" secondItem="fLq-dp-Ld4" secondAttribute="top" constant="40" id="vrE-j9-4M9"/>
@@ -180,15 +237,34 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZTH-uf-v28" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Cy6-oU-JWM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="873.69668246445497" y="93.84615384615384"/>
+            <point key="canvasLocation" x="1625.8293838862558" y="93.84615384615384"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="H4W-jX-VvP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="0SI-9D-ERu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ebx-II-5Gf">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="qkK-Ce-8Re"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O9w-f9-X6w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.51658767772511" y="93.84615384615384"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="oko-vM-O3B"/>
+        <segue reference="BgI-UD-arI"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="CoverIllustration" width="1024" height="1024"/>
+        <image name="arrow.uturn.left.circle.fill" catalog="system" width="128" height="121"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="lock.shield" catalog="system" width="128" height="118"/>

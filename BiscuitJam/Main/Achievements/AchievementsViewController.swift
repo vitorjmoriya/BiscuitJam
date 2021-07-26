@@ -1,21 +1,20 @@
 //
-//  MainViewController.swift
+//  AchievementsViewController.swift
 //  BiscuitJam
 //
-//  Created by Paulo Bassani on 21/07/21.
+//  Created by Paulo Bassani on 26/07/21.
 //
 
 import UIKit
 
-class MainViewController: UIViewController {
+class AchievementsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        AudioManager.shared.playMusic(name: "The Curious Kitten - Aaron Kenny" , musicExtension: "mp3")
+
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func goBackMenu(unwindSegue: UIStoryboardSegue) {}
 
     /*
     // MARK: - Navigation

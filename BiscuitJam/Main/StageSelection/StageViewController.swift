@@ -13,6 +13,8 @@ class StageCollectionViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBAction func goBackMenu(unwindSegue: UIStoryboardSegue) {}
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -14,6 +14,7 @@
 		2707B14026A8762F0029B958 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2707B13F26A8762F0029B958 /* AudioPlayer.swift */; };
 		275D8DC926AF0AD700DFBAD8 /* AchievementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275D8DC826AF0AD700DFBAD8 /* AchievementsViewController.swift */; };
 		275D8DCB26AF15DC00DFBAD8 /* The Curious Kitten - Aaron Kenny.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 275D8DCA26AF15DB00DFBAD8 /* The Curious Kitten - Aaron Kenny.mp3 */; };
+		275D8DCD26B0A87600DFBAD8 /* AchievementIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275D8DCC26B0A87600DFBAD8 /* AchievementIconView.swift */; };
 		27C2BE7126AB5CFA00272C6B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27C2BE7026AB5CFA00272C6B /* MainStoryboard.storyboard */; };
 		5F11AE0F26AE39FE008213F9 /* BlindRat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F11AE0E26AE39FE008213F9 /* BlindRat.swift */; };
 		5F11AE1226AE3E28008213F9 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F11AE1126AE3E28008213F9 /* CGPoint.swift */; };
@@ -40,6 +41,7 @@
 		2707B13F26A8762F0029B958 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		275D8DC826AF0AD700DFBAD8 /* AchievementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewController.swift; sourceTree = "<group>"; };
 		275D8DCA26AF15DB00DFBAD8 /* The Curious Kitten - Aaron Kenny.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "The Curious Kitten - Aaron Kenny.mp3"; sourceTree = "<group>"; };
+		275D8DCC26B0A87600DFBAD8 /* AchievementIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementIconView.swift; sourceTree = "<group>"; };
 		27C2BE7026AB5CFA00272C6B /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		5F11AE0E26AE39FE008213F9 /* BlindRat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlindRat.swift; sourceTree = "<group>"; };
 		5F11AE1126AE3E28008213F9 /* CGPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				275D8DC826AF0AD700DFBAD8 /* AchievementsViewController.swift */,
+				275D8DCC26B0A87600DFBAD8 /* AchievementIconView.swift */,
 			);
 			path = Achievements;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				2707B12926A86B020029B958 /* PowerUp.swift in Sources */,
 				2707B13A26A86DDB0029B958 /* SettingsViewController.swift in Sources */,
 				5F11AE1426AE3E38008213F9 /* CGRect.swift in Sources */,
+				275D8DCD26B0A87600DFBAD8 /* AchievementIconView.swift in Sources */,
 				5F8EE8B126A75BC800E4BA0E /* Engine.swift in Sources */,
 				5F7B755A26A7064800392D56 /* GameScene.swift in Sources */,
 				5F7B755C26A7064800392D56 /* GameViewController.swift in Sources */,

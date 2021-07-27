@@ -12,7 +12,7 @@
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="MainViewController" customModule="BiscuitJam" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                    <view key="view" contentMode="scaleAspectFit" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -62,10 +62,14 @@
                         <constraints>
                             <constraint firstItem="52H-ZX-4cw" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="DUy-RK-r4s"/>
                             <constraint firstItem="52H-ZX-4cw" firstAttribute="leading" secondItem="IgW-70-0BO" secondAttribute="trailing" constant="15" id="OM5-Jo-qdn"/>
+                            <constraint firstAttribute="bottom" secondItem="kjG-U9-HjY" secondAttribute="bottom" id="Oum-TC-oJm"/>
+                            <constraint firstItem="kjG-U9-HjY" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="S92-uR-QRV"/>
                             <constraint firstItem="IgW-70-0BO" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="42" id="SrQ-Et-SRU"/>
                             <constraint firstAttribute="trailing" secondItem="kjG-U9-HjY" secondAttribute="trailing" id="eEf-xK-z4v"/>
                             <constraint firstItem="pk8-1K-O1f" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="emw-BJ-Lrr"/>
+                            <constraint firstItem="kjG-U9-HjY" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="fN5-Jl-9od"/>
                             <constraint firstItem="kjG-U9-HjY" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="hV4-06-O3Q"/>
+                            <constraint firstAttribute="trailing" secondItem="kjG-U9-HjY" secondAttribute="trailing" id="i58-Hl-xGm"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="52H-ZX-4cw" secondAttribute="trailing" constant="15" id="kef-Vq-Yby"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="pk8-1K-O1f" secondAttribute="bottom" constant="100" id="mdB-lu-WFN"/>
                             <constraint firstItem="kjG-U9-HjY" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="pNO-Xl-vFM"/>
@@ -334,7 +338,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="CoverIllustration" width="1024" height="1024"/>
+        <image name="CoverIllustration" width="2532" height="1170"/>
         <image name="arrow.uturn.left.circle.fill" catalog="system" width="128" height="121"/>
         <image name="bolt.heart.fill" catalog="system" width="128" height="109"/>
         <image name="eye" catalog="system" width="128" height="81"/>

@@ -28,6 +28,7 @@ class GameViewController: UIViewController {
                 scene.scaleMode = .aspectFit
                 
                 // Present the scene
+                AudioManager.shared.playMusic(name: "not-a-muffin" , musicExtension: "mp3")
                 view.presentScene(scene)
             }
             

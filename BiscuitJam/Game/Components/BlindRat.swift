@@ -28,6 +28,8 @@ class BlindRat: Rat {
         //Formula: time = distance / speed
         let duration = TimeInterval(point.distance(point: (self.component(ofType: SpriteComponent.self)?.node.position)!) / 100)
         let move = SKAction.move(to: point, duration: duration)
+        let angle = atan2(point.y - (self.component(ofType: SpriteComponent.self)?.node.position.y)!, point.x - (self.component(ofType: SpriteComponent.self)?.node.position.x)!)
+        self.component(ofType: SpriteComponent.self)?.node.zRotation = angle - CGFloat(Double.pi/2)
         let block = SKAction.run {
             self.ratMove(within: rect)
         }

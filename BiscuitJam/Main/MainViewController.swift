@@ -11,7 +11,7 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        AudioManager.shared.playMusic(name: "not-a-muffin" , musicExtension: "mp3")
+        AudioManager.shared.playMusic(name: "niffum-a-ton" , musicExtension: "mp3")
         // Do any additional setup after loading the view.
     }
     

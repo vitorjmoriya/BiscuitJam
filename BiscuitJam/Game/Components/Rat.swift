@@ -17,6 +17,7 @@ import GameplayKit
 // 1
 class Rat: GKEntity {
     
+
     init(imageName: String) {
         super.init()
         
@@ -29,9 +30,9 @@ class Rat: GKEntity {
     }
     func ratMove(within rect:CGRect){
         
-        //Go randomly around the screen within view bounds
         let point = rect.randomBorderPoint(fromPosition: (self.component(ofType: SpriteComponent.self)?.node.position)!)
-        
+
+        //Go randomly around the screen within view bounds
         //Formula: time = distance / speed
         let duration = TimeInterval(point.distance(point: (self.component(ofType: SpriteComponent.self)?.node.position)!) / 100)
         let move = SKAction.move(to: point, duration: duration)
@@ -39,7 +40,13 @@ class Rat: GKEntity {
             self.ratMove(within: rect)
         }
         let loop = SKAction.sequence([move,block])
-        
         self.component(ofType: SpriteComponent.self)?.node.run(loop)
+    }
+    func ratStop() {
+        //self.component(ofType: SpriteComponent.self)?.node.removeAllActions()
+        self.component(ofType: SpriteComponent.self)?.node.isPaused = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.component(ofType: SpriteComponent.self)?.node.isPaused = false
+        }
     }
 }

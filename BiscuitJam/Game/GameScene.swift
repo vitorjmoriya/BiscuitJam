@@ -35,15 +35,22 @@ class GameScene: SKScene {
         self.physicsBody = borderBody
         return borderBody
     }()
-//    let humanCastle = Castle(imageName: "castle1_atk")
-//    if let spriteComponent = humanCastle.component(ofType: SpriteComponent.self) {
-//      spriteComponent.node.position = CGPoint(x: spriteComponent.node.size.width/2, y: size.height/2)
-//    }
-//    entityManager.add(humanCastle)
+    
+    lazy var powerUp: SKSpriteNode = {
+        let powerUp = SKSpriteNode(imageNamed: "Cookie")
+        powerUp.position = CGPoint(x: 70, y: 20)
+        powerUp.physicsBody = SKPhysicsBody(texture: powerUp.texture!, size: powerUp.size)
+        powerUp.physicsBody?.categoryBitMask = 4
+        powerUp.physicsBody?.isDynamic = false
+        return powerUp
+    }()
+    
+    
     var Time:Int = 0
     var startTouch = CGPoint()
     var playerPosition = CGPoint()
     //var cupcake = SKSpriteNode(imageNamed: "Rat")
+    let rat = Rat(imageName: "Rat")
     override func didMove(to view: SKView) {
         self.physicsWorld.contactDelegate = self
         entityManager = EntityManager(scene: self)
@@ -54,11 +61,11 @@ class GameScene: SKScene {
         self.physicsBody = borderBody
         //blindRatMove(within: self.frame)
         //let rat = BlindRat(imageName: "Rat")
-        let rat = Rat(imageName: "Rat")
         //rat.ratMove(within: self.frame)
         rat.ratMove(within: self.frame)
         addChild(rat.component(ofType: SpriteComponent.self)!.node)
         //ratMove(within: self.frame)
+        addChild(powerUp)
     }
     
     //Movement
@@ -107,9 +114,10 @@ extension GameScene: SKPhysicsContactDelegate{
             upperBody = contact.bodyA
         }
         
-        if upperBody.categoryBitMask == 2 {
-            print("bateu")
-            
+        if upperBody.categoryBitMask == 4 {
+            print("PARA TUDO")
+            rat.ratStop()
+            powerUp.removeFromParent()
         }
     }
 }

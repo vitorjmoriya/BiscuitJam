@@ -17,7 +17,7 @@ class Player: GKEntity{
         if let sprite = component(ofType: SpriteComponent.self)?.node {
             sprite.physicsBody = SKPhysicsBody(circleOfRadius: 20)
             sprite.physicsBody?.categoryBitMask = 1
-            sprite.physicsBody?.contactTestBitMask = 2
+            sprite.physicsBody?.contactTestBitMask = 2 + 4
             sprite.physicsBody?.collisionBitMask = 2
             sprite.physicsBody?.affectedByGravity = false
         }

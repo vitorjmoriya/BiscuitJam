@@ -15,7 +15,6 @@ class GameScene: SKScene {
         var player = Player(imageName: "Cupcake")
         if let spriteComponent = player.component(ofType: SpriteComponent.self){
             //spriteComponent.node.position = CGPoint(x: size.width/2, y: size.height/2)
-            spriteComponent.node.size = CGSize(width: 20, height: 20)
 
         }
         entityManager.add(player)
@@ -36,36 +35,37 @@ class GameScene: SKScene {
         return borderBody
     }()
     
-    lazy var powerUp: SKSpriteNode = {
-        let powerUp = SKSpriteNode(imageNamed: "Cookie")
-        powerUp.position = CGPoint(x: 70, y: 20)
-        powerUp.physicsBody = SKPhysicsBody(texture: powerUp.texture!, size: powerUp.size)
-        powerUp.physicsBody?.categoryBitMask = 4
-        powerUp.physicsBody?.isDynamic = false
-        return powerUp
+    lazy var cookiePowerUp: SKSpriteNode = {
+        let cookiePowerUp = SKSpriteNode(imageNamed: "Cookie")
+        cookiePowerUp.physicsBody = SKPhysicsBody(texture: cookiePowerUp.texture!, size: cookiePowerUp.size)
+        cookiePowerUp.physicsBody?.categoryBitMask = 4
+        cookiePowerUp.physicsBody?.isDynamic = false
+        return cookiePowerUp
     }()
     
     
     var Time:Int = 0
     var startTouch = CGPoint()
     var playerPosition = CGPoint()
+    var left:Int = 0
+    
     //var cupcake = SKSpriteNode(imageNamed: "Rat")
-    let rat = Rat(imageName: "Rat")
+    //let rat = Rat(imageName: "Rat")
+    var ratList = [Rat(imageName: "Rat"), Rat(imageName: "Rat"), Rat(imageName: "Rat"), Rat(imageName: "Rat")]
     override func didMove(to view: SKView) {
         self.physicsWorld.contactDelegate = self
         entityManager = EntityManager(scene: self)
-        //cupcake = self.childNode(withName: "cupcake") as! SKSpriteNode
         physicsWorld.gravity = CGVector(dx: 0.0, dy: 0.0)
-        //cupcake.physicsBody?.applyImpulse(CGVector(dx: 6, dy: 6))
         setupTimer()
         self.physicsBody = borderBody
         //blindRatMove(within: self.frame)
         //let rat = BlindRat(imageName: "Rat")
         //rat.ratMove(within: self.frame)
-        rat.ratMove(within: self.frame)
-        addChild(rat.component(ofType: SpriteComponent.self)!.node)
+        //rat.ratMove(within: self.frame)
+        //addChild(rat.component(ofType: SpriteComponent.self)!.node)
         //ratMove(within: self.frame)
-        addChild(powerUp)
+        addChild(cookiePowerUp)
+        setupRats()
     }
     
     //Movement
@@ -73,6 +73,7 @@ class GameScene: SKScene {
         let touch = touches.first
         if let location = touch?.location(in: self){
             startTouch = location
+            left = 0
         }
     }
     
@@ -80,10 +81,23 @@ class GameScene: SKScene {
         let touch = touches.first
         if let location = touch?.location(in: self){
             if let spriteComponent = player.component(ofType: SpriteComponent.self){
+                
                 spriteComponent.node.position = CGPoint(x: spriteComponent.node.position.x + (location.x - startTouch.x) * 0.06, y: spriteComponent.node.position.y + (location.y - startTouch.y) * 0.06)
+                if location.x < spriteComponent.node.position.x && left == 0{
+                    left = 1
+                    spriteComponent.node.xScale = spriteComponent.node.xScale * -1
+                }
+                else if location.x > spriteComponent.node.position.x && left == 1{
+                    left = 0
+                    spriteComponent.node.xScale = spriteComponent.node.xScale * -1
+                }
             }
 
         }
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        left = 0
     }
     
     //Timer
@@ -94,9 +108,18 @@ class GameScene: SKScene {
         }, SKAction.wait(forDuration: 1)])))
         
     }
-    func setupPlayer(){
+    func setupPlayer() {
         if let playerNode = player.component(ofType: SpriteComponent.self)?.node {
             playerNode.position = CGPoint(x: size.height/2, y: size.width/2)
+        }
+    }
+    func setupRats() {
+        for rat in ratList {
+            if let ratNode = rat.component(ofType: SpriteComponent.self) {
+                ratNode.node.position = self.frame.randomBorderPoint()
+            }
+            addChild(rat.component(ofType: SpriteComponent.self)!.node)
+            rat.ratMove(within: self.frame)
         }
     }
 }
@@ -116,8 +139,8 @@ extension GameScene: SKPhysicsContactDelegate{
         
         if upperBody.categoryBitMask == 4 {
             print("PARA TUDO")
-            rat.ratStop()
-            powerUp.removeFromParent()
+            //rat.ratStop()
+            cookiePowerUp.removeFromParent()
         }
     }
 }

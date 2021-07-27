@@ -16,6 +16,7 @@
 		275D8DCD26B0A87600DFBAD8 /* AchievementIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275D8DCC26B0A87600DFBAD8 /* AchievementIconView.swift */; };
 		27A21D3426B0BF630098F476 /* not-a-muffin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 27A21D3326B0BF630098F476 /* not-a-muffin.mp3 */; };
 		27A21D3626B0C00E0098F476 /* GameOverStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A21D3526B0C00E0098F476 /* GameOverStoryboard.storyboard */; };
+		27A21D3826B0C50C0098F476 /* niffum-a-ton.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 27A21D3726B0C50C0098F476 /* niffum-a-ton.mp3 */; };
 		27C2BE7126AB5CFA00272C6B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27C2BE7026AB5CFA00272C6B /* MainStoryboard.storyboard */; };
 		5F11AE0F26AE39FE008213F9 /* BlindRat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F11AE0E26AE39FE008213F9 /* BlindRat.swift */; };
 		5F11AE1226AE3E28008213F9 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F11AE1126AE3E28008213F9 /* CGPoint.swift */; };
@@ -32,7 +33,6 @@
 		5F9A601426AA29CB0086DE83 /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9A601326AA29CB0086DE83 /* EntityManager.swift */; };
 		5F9A601626AA2A340086DE83 /* SpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9A601526AA2A340086DE83 /* SpriteComponent.swift */; };
 		5F9A601826AA64EB0086DE83 /* ScoreComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9A601726AA64EB0086DE83 /* ScoreComponent.swift */; };
-		5FBEAADF26B0BCD7004201CC /* not-a-muffin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5FBEAADE26B0BCD7004201CC /* not-a-muffin.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +45,7 @@
 		275D8DCC26B0A87600DFBAD8 /* AchievementIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementIconView.swift; sourceTree = "<group>"; };
 		27A21D3326B0BF630098F476 /* not-a-muffin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "not-a-muffin.mp3"; sourceTree = "<group>"; };
 		27A21D3526B0C00E0098F476 /* GameOverStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameOverStoryboard.storyboard; sourceTree = "<group>"; };
+		27A21D3726B0C50C0098F476 /* niffum-a-ton.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "niffum-a-ton.mp3"; sourceTree = "<group>"; };
 		27C2BE7026AB5CFA00272C6B /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		5F11AE0E26AE39FE008213F9 /* BlindRat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlindRat.swift; sourceTree = "<group>"; };
 		5F11AE1126AE3E28008213F9 /* CGPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
@@ -63,7 +64,6 @@
 		5F9A601326AA29CB0086DE83 /* EntityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
 		5F9A601526AA2A340086DE83 /* SpriteComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteComponent.swift; sourceTree = "<group>"; };
 		5F9A601726AA64EB0086DE83 /* ScoreComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreComponent.swift; sourceTree = "<group>"; };
-		5FBEAADE26B0BCD7004201CC /* not-a-muffin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "not-a-muffin.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +200,7 @@
 				27C2BE6C26AB199300272C6B /* Main */,
 				2707B13E26A876100029B958 /* AudioManager */,
 				5F7B756026A7064A00392D56 /* Assets.xcassets */,
+				27A21D3726B0C50C0098F476 /* niffum-a-ton.mp3 */,
 				27A21D3326B0BF630098F476 /* not-a-muffin.mp3 */,
 				5F7B756226A7064A00392D56 /* Info.plist */,
 			);
@@ -263,6 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27A21D3826B0C50C0098F476 /* niffum-a-ton.mp3 in Resources */,
 				27A21D3426B0BF630098F476 /* not-a-muffin.mp3 in Resources */,
 				27C2BE7126AB5CFA00272C6B /* MainStoryboard.storyboard in Resources */,
 				2707B13D26A86EC00029B958 /* GameStoryboard.storyboard in Resources */,

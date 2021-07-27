@@ -8,7 +8,6 @@
 import SpriteKit
 extension CGRect {
     func randomPoint() -> CGPoint {
-        let origin = self.origin
         return CGPoint(x:CGFloat(Int.random(in: -310 ..< 310)),
                        y:CGFloat(Int.random(in: -158 ..< 80)))
     }

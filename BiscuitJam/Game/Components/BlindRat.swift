@@ -14,6 +14,10 @@ class BlindRat: Rat {
         super.init(imageName: imageName)
         // 2
         let spriteComponent = SpriteComponent(texture: SKTexture(imageNamed: imageName))
+        spriteComponent.node.physicsBody = SKPhysicsBody(texture: spriteComponent.node.texture!, size: spriteComponent.node.size)
+        spriteComponent.node.physicsBody?.categoryBitMask = 8
+        spriteComponent.node.physicsBody?.contactTestBitMask = 1
+        spriteComponent.node.physicsBody?.collisionBitMask = 0
         addComponent(spriteComponent)
     }
     

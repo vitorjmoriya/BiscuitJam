@@ -31,6 +31,7 @@
 		5F9A601426AA29CB0086DE83 /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9A601326AA29CB0086DE83 /* EntityManager.swift */; };
 		5F9A601626AA2A340086DE83 /* SpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9A601526AA2A340086DE83 /* SpriteComponent.swift */; };
 		5F9A601826AA64EB0086DE83 /* ScoreComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9A601726AA64EB0086DE83 /* ScoreComponent.swift */; };
+		5FBEAADF26B0BCD7004201CC /* not-a-muffin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5FBEAADE26B0BCD7004201CC /* not-a-muffin.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		5F9A601326AA29CB0086DE83 /* EntityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
 		5F9A601526AA2A340086DE83 /* SpriteComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteComponent.swift; sourceTree = "<group>"; };
 		5F9A601726AA64EB0086DE83 /* ScoreComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreComponent.swift; sourceTree = "<group>"; };
+		5FBEAADE26B0BCD7004201CC /* not-a-muffin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "not-a-muffin.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 				2707B13E26A876100029B958 /* AudioManager */,
 				5F7B756026A7064A00392D56 /* Assets.xcassets */,
 				5F7B756226A7064A00392D56 /* Info.plist */,
+				5FBEAADE26B0BCD7004201CC /* not-a-muffin.mp3 */,
 				275D8DCA26AF15DB00DFBAD8 /* The Curious Kitten - Aaron Kenny.mp3 */,
 			);
 			path = BiscuitJam;
@@ -264,6 +267,7 @@
 				5F8EE8B526A7797300E4BA0E /* Stage1Scene.sks in Resources */,
 				5F88574E26B0AE970040B872 /* Cupcake.atlas in Resources */,
 				5F7B756126A7064A00392D56 /* Assets.xcassets in Resources */,
+				5FBEAADF26B0BCD7004201CC /* not-a-muffin.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -49,14 +49,13 @@ class GameScene: SKScene {
     var playerPosition = CGPoint()
     var left:Int = 0
     var playerDead:Bool = false
-    var ratList = [Rat(imageName: "Rat"), Rat(imageName: "Rat"), Rat(imageName: "Rat"), Rat(imageName: "Rat")]
+    var ratList = [Rat(imageName: "Rat"), Rat(imageName: "Rat")]
     override func didMove(to view: SKView) {
         self.physicsWorld.contactDelegate = self
         entityManager = EntityManager(scene: self)
         physicsWorld.gravity = CGVector(dx: 0.0, dy: 0.0)
         setupTimer()
         self.physicsBody = borderBody
-        addChild(cookiePowerUp)
         setupRats()
     }
     
@@ -101,6 +100,24 @@ class GameScene: SKScene {
         timerLabel.run(SKAction.repeatForever(SKAction.sequence([SKAction.run {
             self.Time += 1
             self.timerLabel.text = "Time: \(self.Time)"
+            if self.Time % 5 == 0 {
+                if Bool.random(){
+                    let rat = BlindRat(imageName: "BlindRat")
+                    self.ratList.append(rat)
+                    rat.component(ofType: SpriteComponent.self)?.node.position = self.frame.randomBorderPoint()
+                    self.addChild(rat.component(ofType: SpriteComponent.self)!.node)
+                    rat.ratMove(within: self.frame)
+                }
+                else{
+                    let rat = Rat(imageName: "Rat")
+                    self.ratList.append(rat)
+                    rat.component(ofType: SpriteComponent.self)?.node.position = self.frame.randomBorderPoint()
+                    self.addChild(rat.component(ofType: SpriteComponent.self)!.node)
+                    rat.ratMove(within: self.frame)
+                }
+                self.cookiePowerUp.position = self.frame.randomPoint()
+                self.addChild(self.cookiePowerUp)
+            }
         }, SKAction.wait(forDuration: 1)])))
         
     }
@@ -135,10 +152,14 @@ extension GameScene: SKPhysicsContactDelegate{
         
         if upperBody.categoryBitMask == 4 {
             cookiePowerUp.removeFromParent()
+            for rat in ratList {
+                rat.ratStop()
+            }
         }
         else if upperBody.categoryBitMask == 8 {
             playerDead = true
             player.component(ofType: SpriteComponent.self)?.node.texture = SKTexture(imageNamed: "CupcakeDead")
+
         }
     }
 }

@@ -30,22 +30,25 @@ class AchievementsViewController: UIViewController {
             view?.alpha = 1
         }
         if let touch = touches.first {
-            touch.view?.alpha = 0.5
             switch touch.view {
             case smoothView:
+                smoothView.alpha = 0.5
                 descriptionLabel.text = "Survive at least 5s with 10 or more rats on the screen.\n\nStatus: compleated!"
                 imageView.image = #imageLiteral(resourceName: "Foto da Borba")
             case greedyView:
+                greedyView.alpha = 0.5
                 descriptionLabel.text = "Collect all types of power ups in a single game.\n\nStatus: compleated!"
                 imageView.image = #imageLiteral(resourceName: "Foto da Branca")
             case elderyView:
+                elderyView.alpha = 0.5
                 descriptionLabel.text = "Survive at least 60s.\n\nStatus: compleated!"
                 imageView.image = #imageLiteral(resourceName: "Foto da Zana")
             case legendaryView:
+                legendaryView.alpha = 0.5
                 descriptionLabel.text = "Compleate all achievements in a single game.\n\nStatus: compleated!"
                 imageView.image = #imageLiteral(resourceName: "Foto das Tres")
             default:
-                descriptionLabel.text = "Something wrong happened."
+                break
             }
         }
     }

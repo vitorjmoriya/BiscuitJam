@@ -48,9 +48,7 @@ class GameScene: SKScene {
     var startTouch = CGPoint()
     var playerPosition = CGPoint()
     var left:Int = 0
-    
-    //var cupcake = SKSpriteNode(imageNamed: "Rat")
-    //let rat = Rat(imageName: "Rat")
+    var playerDead:Bool = false
     var ratList = [Rat(imageName: "Rat"), Rat(imageName: "Rat"), Rat(imageName: "Rat"), Rat(imageName: "Rat")]
     override func didMove(to view: SKView) {
         self.physicsWorld.contactDelegate = self
@@ -58,41 +56,39 @@ class GameScene: SKScene {
         physicsWorld.gravity = CGVector(dx: 0.0, dy: 0.0)
         setupTimer()
         self.physicsBody = borderBody
-        //blindRatMove(within: self.frame)
-        //let rat = BlindRat(imageName: "Rat")
-        //rat.ratMove(within: self.frame)
-        //rat.ratMove(within: self.frame)
-        //addChild(rat.component(ofType: SpriteComponent.self)!.node)
-        //ratMove(within: self.frame)
         addChild(cookiePowerUp)
         setupRats()
     }
     
     //Movement
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let touch = touches.first
-        if let location = touch?.location(in: self){
-            startTouch = location
-            left = 0
+        if !playerDead {
+            let touch = touches.first
+            if let location = touch?.location(in: self){
+                startTouch = location
+                left = 0
+            }
         }
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let touch = touches.first
-        if let location = touch?.location(in: self){
-            if let spriteComponent = player.component(ofType: SpriteComponent.self){
-                
-                spriteComponent.node.position = CGPoint(x: spriteComponent.node.position.x + (location.x - startTouch.x) * 0.06, y: spriteComponent.node.position.y + (location.y - startTouch.y) * 0.06)
-                if location.x < spriteComponent.node.position.x && left == 0{
-                    left = 1
-                    spriteComponent.node.xScale = spriteComponent.node.xScale * -1
+        if !playerDead {
+            let touch = touches.first
+            if let location = touch?.location(in: self){
+                if let spriteComponent = player.component(ofType: SpriteComponent.self){
+                    
+                    spriteComponent.node.position = CGPoint(x: spriteComponent.node.position.x + (location.x - startTouch.x) * 0.06, y: spriteComponent.node.position.y + (location.y - startTouch.y) * 0.06)
+                    if location.x < spriteComponent.node.position.x && left == 0{
+                        left = 1
+                        spriteComponent.node.xScale = spriteComponent.node.xScale * -1
+                    }
+                    else if location.x > spriteComponent.node.position.x && left == 1{
+                        left = 0
+                        spriteComponent.node.xScale = spriteComponent.node.xScale * -1
+                    }
                 }
-                else if location.x > spriteComponent.node.position.x && left == 1{
-                    left = 0
-                    spriteComponent.node.xScale = spriteComponent.node.xScale * -1
-                }
-            }
 
+            }
         }
     }
     
@@ -138,9 +134,11 @@ extension GameScene: SKPhysicsContactDelegate{
         }
         
         if upperBody.categoryBitMask == 4 {
-            print("PARA TUDO")
-            //rat.ratStop()
             cookiePowerUp.removeFromParent()
+        }
+        else if upperBody.categoryBitMask == 8 {
+            playerDead = true
+            player.component(ofType: SpriteComponent.self)?.node.texture = SKTexture(imageNamed: "CupcakeDead")
         }
     }
 }

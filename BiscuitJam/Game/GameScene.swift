@@ -50,6 +50,7 @@ class GameScene: SKScene {
     var left:Int = 0
     var playerDead:Bool = false
     var ratList = [Rat(imageName: "Rat"), Rat(imageName: "Rat")]
+    var cookieOn:Bool = false
     override func didMove(to view: SKView) {
         self.physicsWorld.contactDelegate = self
         entityManager = EntityManager(scene: self)
@@ -115,8 +116,12 @@ class GameScene: SKScene {
                     self.addChild(rat.component(ofType: SpriteComponent.self)!.node)
                     rat.ratMove(within: self.frame)
                 }
-                self.cookiePowerUp.position = self.frame.randomPoint()
-                self.addChild(self.cookiePowerUp)
+                if !self.cookieOn {
+                    self.cookiePowerUp.position = self.frame.randomPoint()
+                    self.addChild(self.cookiePowerUp)
+                    self.cookieOn = true
+                }
+                
             }
         }, SKAction.wait(forDuration: 1)])))
         
@@ -155,11 +160,15 @@ extension GameScene: SKPhysicsContactDelegate{
             for rat in ratList {
                 rat.ratStop()
             }
+            cookieOn = false
         }
         else if upperBody.categoryBitMask == 8 {
             playerDead = true
             player.component(ofType: SpriteComponent.self)?.node.texture = SKTexture(imageNamed: "CupcakeDead")
-
+            let storyboard = UIStoryboard(name: "GameOverStoryboard", bundle: nil)
+            let vc = storyboard.instantiateViewController(identifier: "GameOver")
+            self.view?.window?.rootViewController?.present(vc, animated: true, completion: nil)
+            
         }
     }
 }
